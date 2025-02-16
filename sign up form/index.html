@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Glassmorphism Card */
+        .login-container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+            width: 320px;
+            text-align: center;
+            color: black;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .login-container h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Input Fields */
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.3);
+            color: black 
+    ;
+            outline: none;
+            text-align: center;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .login-container input::placeholder {
+            color:black;
+        }
+
+        .login-container input:focus {
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Button Styling */
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            border: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 15px rgba(255, 117, 140, 0.4);
+        }
+
+        .login-container button:hover {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(255, 117, 140, 0.6);
+        }
+
+        /* Floating Particles */
+        .bubble {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(15px);
+            animation: floatBubbles 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatBubbles {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        .bubble:nth-child(1) {
+            top: 10%;
+            left: 15%;
+            animation-duration: 5s;
+        }
+        .bubble:nth-child(2) {
+            bottom: 15%;
+            right: 20%;
+            animation-duration: 7s;
+        }
+        .bubble:nth-child(3) {
+            top: 50%;
+            left: 80%;
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <div class="login-container">
+        <h2>Signup</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" id="email" required />
+            <input type="password" placeholder="Enter your password" id="password" required />
+            <button type="submit" id="submit">Signup</button>
+        </form>
+    </div>
+</body>
+</html>
